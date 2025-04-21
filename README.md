@@ -78,8 +78,8 @@ https://github.com/user-attachments/assets/d472b683-519f-433f-8be2-fff401509663
 
 
 
+![FinalDEMOgif](https://github.com/user-attachments/assets/75f7a442-42de-450a-881b-8c18630b0fb7)
 
-![Uploading FinalDEMOgif.gif…]()
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
