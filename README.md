@@ -73,7 +73,10 @@ The following **stretch** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 
-https://github.com/user-attachments/assets/6da0d7e5-0277-40f8-b0b3-d1baea1ddc45
+https://github.com/user-attachments/assets/67f949b0-8c25-450d-b327-b4cea55818c2
+
+
+
 
 
 
