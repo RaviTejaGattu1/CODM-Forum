@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  color: #fff;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+  background: linear-gradient(45deg, #0d1b2a, #1b263b, #415a77, #778da9);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+  cursor: url('/controller-cursor.png'), default;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.3;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.dark {
+  background: linear-gradient(45deg, #0d1b2a, #1b263b, #415a77, #778da9);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+body.light {
+  background: linear-gradient(45deg, #e0e1dd, #d9d9d9, #b7b7b7, #a9a9a9);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #333;
+}
+
+body.codm {
+  background: linear-gradient(45deg, #ff4800, #1b263b, #ff9500, #0d1b2a);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .header, body.codm .header {
+  background: rgba(13, 27, 42, 0.9);
+}
+
+body.light .header {
+  background: rgba(224, 225, 221, 0.9);
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+body.dark .header h1, body.codm .header h1 {
+  color: #00ffea;
+  text-shadow: 0 0 10px #00ffea;
+}
+
+body.light .header h1 {
+  color: #ff barriers;
+  text-shadow: 0 0 5px #ff4800;
+}
+
+.header a {
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+body.dark .header a, body.codm .header a {
+  color: #ff9500;
+}
+
+body.light .header a {
+  color: #ff4800;
+}
+
+.header a:hover {
+  color: #00ffea;
+}
+
+body.light .header a:hover {
+  color: #e63946;
+}
+
+.header input, .header select {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+body.dark .header input, body.dark .header select, body.codm .header input, body.codm .header select {
+  background: #1b263b;
+  color: #fff;
+}
+
+body.light .header input, body.light .header select {
+  background: #b7b7b7;
+  color: #333;
+}
+
+.sort-buttons {
+  margin: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sort-buttons button, .sort-buttons select {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+body.dark .sort-buttons button, body.dark .sort-buttons select, body.codm .sort-buttons button, body.codm .sort-buttons select {
+  background: #ff9500;
+  color: #fff;
+}
+
+body.light .sort-buttons button, body.light .sort-buttons select {
+  background: #ff4800;
+  color: #fff;
+}
+
+.sort-buttons button:hover {
+  background: #00ffea;
+  color: #0d1b2a;
+}
+
+.sort-buttons button.active {
+  background: #00ffea;
+  color: #0d1b2a;
+}
+
+.post-list, .post-detail, .post-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .post-list, body.dark .post-detail, body.dark .post-form, body.codm .post-list, body.codm .post-detail, body.codm .post-form {
+  background: rgba(27, 38, 59, 0.8);
+}
+
+body.light .post-list, body.light .post-detail, body.light .post-form {
+  background: rgba(183, 183, 183, 0.8);
+}
+
+.post-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+body.dark .post-item, body.codm .post-item {
+  background: #415a77;
+}
+
+body.light .post-item {
+  background: #e0e1dd;
+}
+
+.post-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #00ffea;
+}
+
+.post-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+body.dark .post-item h3, body.codm .post-item h3 {
+  color: #ff9500;
+  text-shadow: 0 0 5px #ff9500;
+}
+
+body.light .post-item h3 {
+  color: #ff4800;
+  text-shadow: 0 0 3px #ff4800;
+}
+
+.post-item p {
+  margin: 0.5rem 0;
+}
+
+body.dark .post-item p, body.codm .post-item p {
+  color: #e0e1dd;
+}
+
+body.light .post-item p {
+  color: #333;
+}
+
+.media-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin: 1rem 0;
+}
+
+.media-container img, .media-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.post-detail button, .post-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0.5rem 0;
+  transition: background 0.3s;
+}
+
+body.dark .post-detail button, body.dark .post-form button, body.codm .post-detail button, body.codm .post-form button {
+  background: #ff9500;
+  color: #fff;
+}
+
+body.light .post-detail button, body.light .post-form button {
+  background: #ff4800;
+  color: #fff;
+}
+
+.post-detail button:hover, .post-form button:hover {
+  background: #00ffea;
+  color: #0d1b2a;
+}
+
+.post-detail input, .post-form input, .post-form textarea, .post-form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+body.dark .post-detail input, body.dark .post-form input, body.dark .post-form textarea, body.dark .post-form select, body.codm .post-detail input, body.codm .post-form input, body.codm .post-form textarea, body.codm .post-form select {
+  background: #1b263b;
+  color: #fff;
+}
+
+body.light .post-detail input, body.light .post-form input, body.light .post-form textarea, body.light .post-form select {
+  background: #b7b7b7;
+  color: #333;
+}
+
+.post-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+.comment {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+}
+
+body.dark .comment, body.codm .comment {
+  background: #1b263b;
+}
+
+body.light .comment {
+  background: #b7b7b7;
+}
+
+.flag {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+body.dark .flag, body.codm .flag {
+  background: #ff9500;
+  color: #fff;
+}
+
+body.light .flag {
+  background: #ff4800;
+  color: #fff;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loading-spinner {
+  border: 4px solid #e0e1dd;
+  border-top: 4px solid #ff9500;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

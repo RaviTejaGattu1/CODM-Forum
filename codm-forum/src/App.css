@@ -1,0 +1,255 @@
+body.dark {
+  background-image: url('/src/assets/background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #e0e0e0;
+}
+
+body.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  cursor: url('/src/assets/cursor.png'), auto;
+}
+
+a {
+  color: #00aced;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #00aced;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #0087b8;
+}
+
+input, textarea, select {
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-radius;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.header {
+  background-color: #1c2526;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #00aced;
+}
+
+.header input {
+  width: 200px;
+  margin: 0 10px;
+}
+
+.theme-toggle {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+.theme-toggle:hover {
+  background-color: #555;
+}
+
+.sort-buttons {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.sort-buttons button, .sort-buttons select {
+  margin: 0 5px;
+}
+
+.sort-buttons button.active {
+  background-color: #0087b8;
+}
+
+.post-list {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.post-item {
+  background-color: #2a2f30;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.light .post-item {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-item h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.post-item img {
+  max-width: 100%;
+  max-height: 200px; /* Reduced height for home feed */
+  width: 100%; /* Ensure image scales to container width */
+  height: auto;
+  border-radius: 4px;
+  margin: 10px auto; /* Center the image */
+  display: block;
+  object-fit: contain; /* Ensure the entire image is visible without cropping */
+}
+
+.post-item iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  margin: 10px 0;
+}
+
+.post-detail {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2a2f30;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.light .post-detail {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-detail h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.media-container img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  border-radius: 4px;
+  margin: 10px 0;
+  display: block;
+}
+
+.media-container iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
+  margin: 10px 0;
+}
+
+.post-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #2a2f30;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.light .post-form {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-form h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.comment {
+  background-color: #3a3f40;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+body.light .comment {
+  background-color: #f5f5f5;
+}
+
+.flag {
+  display: inline-block;
+  background-color: #ff4757;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.referenced-post {
+  background-color: #3a3f40;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+body.light .referenced-post {
+  background-color: #f5f5f5;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #00aced;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
